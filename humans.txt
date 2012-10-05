@@ -1,0 +1,13 @@
+/* TEAM */
+
+  Site: Modlearning.com is built and maintained by the dedicated folks at Modular Learning, Inc.
+  Twitter: @modlearning
+
+/* THANKS */
+
+  To all our clients and the open source community!
+
+/* SITE */
+
+  Language: English
+  Components: We use Zurb Foundation/SASS/jQuery for the frontend, and a mix of Wordpress/PHP/Rails 3 for the backend.
