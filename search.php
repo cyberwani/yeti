@@ -1,12 +1,10 @@
 
-<?php get_header(); ?>
-
-  <div class="row sub-header">
-    <div class="twelve columns">
-      <h2>
-        Search Results for: <?php echo get_search_query(); ?> 
-      </h2>
-    </div>
+<?php get_header(); ?>  
+ 
+  <div class="twelve columns archive-header">
+    <h2>
+      Search Results for <span class="s-results"><?php echo get_search_query(); ?></span>
+    </h2>
   </div>
   
   <div class="eight columns">
@@ -21,14 +19,16 @@
     
     <div class="page-navi">
 
-      <?php posts_nav_link(' ', 'Previous', 'Next'); ?>
-  
+      <?php //posts_nav_link(' ', 'Previous', 'Next'); ?>
+      <div id="pagination">
+        <?php yeti_pagination(); ?>
+      </div>
     </div>
 
   <?php else: ?>
     
     <article id="post-0" class="post no-results not-found">
-      <h2>Sorry, but nothing matched your search criteria.</h2>
+      <h4>Sorry, but nothing matched your search criteria.</h4>
     </article>
     
   <?php endif; ?>

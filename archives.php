@@ -1,13 +1,13 @@
 
 <?php get_header(); ?>
   
-  <div class="row sub-header">
+  <div class="sub-header">
     <div class="twelve columns">
       <h2>
         <?php if ( is_day() ) : ?>
           Daily Archives: <span><?php get_the_date(); ?></span>
         <?php elseif ( is_month() ) : ?>
-          Monthly Archives: <span><?php get_the_date( 'F Y' ); ?></span>
+          Monthly Archidves: <span><?php get_the_date( 'F Y' ); ?></span>
         <?php elseif ( is_year() ) : ?>
           Yearly Archives: <span><?php get_the_date( 'Y' ); ?></span>
         <?php else : ?>

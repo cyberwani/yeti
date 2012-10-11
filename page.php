@@ -16,42 +16,71 @@
 
   <div class="eight columns">
     
-    <h2>Default Page Template</h2>
+    <h2 class="page-head"><?php wp_title( '' ); ?></h2>
     
-    <h4>Browse by Month</h4>
-    <ul>
-      <?php
-      $args = array(
-        'type' => 'monthly'
-      );
+    <div class="alert-box secondary p-sample">
+      <h4>Browse by Year</h4>
+      <ul>
+        <?php
+        $args = array(
+          'type' => 'yearly'
+        );
+        
+        wp_get_archives( $args );
+        ?>
+      </ul>
       
-      wp_get_archives( $args );
-      ?>
-    </ul>
+      <h4>Browse by Month</h4>
+      <ul>
+        <?php
+        $args = array(
+          'type' => 'monthly'
+        );
+        
+        wp_get_archives( $args );
+        ?>
+      </ul>
+      
+      <h4>Browse by Day</h4>
+      <ul>
+        <?php
+        $args = array(
+          'type' => 'daily'
+        );
+        
+        wp_get_archives( $args );
+        ?>
+      </ul>
+      
+      <h4>Browse by Category</h4>
+      <ul>
+        <?php
+        $args = array(
+          'title_li' => ''
+        );
+        
+        wp_list_categories( $args );
+        ?>
+      </ul>
+      
+      <h4>Browse by Tag</h4>
+      <ul>
+        <?php
+        $args = array(
+          'smallest' => 10,
+          'largest' => 10,
+          'separator' => ', ',
+          'orderby' => 'name',
+          'order' => 'ASC',
+          
+        );
+        
+        wp_tag_cloud( $args );
+                       
+        ?>
+      </ul>
+    </div>
     
-    <h4>Browse by Category</h4>
-    <ul>
-      <?php
-      $args = array(
-        'title_li' => ''
-      );
-      
-      wp_list_categories( $args );
-      ?>
-    </ul>
-    
-    <h4>Browse by Tag</h4>
-    <ul>
-      <?php
-      $args = array(
-        'orderby' => 'name',
-        'order' => 'ASC'
-      );
-      
-      wp_tag_cloud( $args );
-      ?>
-    </ul>
-  
   </div><!-- end columns -->
   
 <?php get_sidebar(); ?>

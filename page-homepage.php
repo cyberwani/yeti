@@ -5,24 +5,21 @@ Template Name: Homepage
 ?>
 
 <?php get_header(); ?>
+ 
+  <div class="twelve columns intro">
+    Welcome to <span class="yeti">Yeti</span>
+  </div> 
 
-  <div class="row">
-    <div class="twelve columns intro">
-      Welcome to <span class="yeti">Yeti</span>
+  <div class="twelve columns">
+    <div id="featured">
+      <img src="<?php echo get_template_directory_uri(); ?>/images/yeti-featured1.png" alt="slide image">
+      <img src="<?php echo get_template_directory_uri(); ?>/images/yeti-featured2.png" alt="slide image">
+      <img src="<?php echo get_template_directory_uri(); ?>/images/yeti-featured3.png" alt="slide image">
     </div>
   </div>
   
-  <div class="row">
-    <div class="twelve columns">
-      <div id="featured">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/yeti-featured1.png" alt="slide image">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/yeti-featured2.png" alt="slide image">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/yeti-featured3.png" alt="slide image">
-      </div>
-    </div>
-  </div>
 
-  <div class="row b-preview">
+  <div class="b-preview">
     
     <div class="twelve columns">
       <h2>LATEST NEWS</h2>
@@ -50,7 +47,7 @@ Template Name: Homepage
           
           <span class="entry-meta-front"><time datetime="<?php echo get_the_date(); ?>"><?php echo get_the_date(); ?></time>
             <?php if ( comments_open() ) : ?>
-              &bull; <?php comments_popup_link( '0 Comments', '1 Comment', '% Comments' ); ?>
+              &bull; <?php comments_popup_link( 'No Comments', '1 Comment', '% Comments' ); ?>
             <?php endif; ?>
           </span>
           
@@ -60,8 +57,6 @@ Template Name: Homepage
       </div>
     <?php endforeach; ?>
         
-  </div>
-  
-  
+  </div>  
   
 <?php get_footer(); ?>

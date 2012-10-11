@@ -13,7 +13,8 @@ if ( function_exists('add_theme_support') ) {
   
   // Add Thumbnail Support
   add_theme_support('post-thumbnails');
-  add_image_size( 'yeti-featured', 220, 140, true ); 
+  add_image_size( 'yeti-featured', 220, 140, true );
+  add_image_size( 'blog-img', 597, 300, true ); 
   
   // Add Multi-Post Format Support
   add_theme_support( 'post-formats', array( 'aside', 'link', 'gallery', 'status', 'quote', 'image' ) );
@@ -98,7 +99,7 @@ function yeti_pagination() {
   global $wp_query;
   $big = 999999999;
   echo paginate_links( array(
-    'base' => str_replace( $big, '%#%', get_pagenum_link( $big ) ),
+    'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
     'format' => '?paged=%#%',
     'current' => max( 1, get_query_var('paged') ),
     'total' => $wp_query->max_num_pages )

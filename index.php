@@ -22,7 +22,7 @@
   <?php else: ?>
     
     <article id="post-0" class="post no-results not-found">
-      <h2>Sorry, no posts to display!</h2>
+      <h4>Sorry, no posts to display!</h4>
     </article>
     
   <?php endif; ?>

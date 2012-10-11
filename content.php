@@ -4,7 +4,7 @@
     <?php if ( has_post_thumbnail() ) : ?>
       
       <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-        <?php the_post_thumbnail(); ?>
+        <?php the_post_thumbnail( 'blog-img' ); ?>
       </a>
            
     <?php endif; ?>
@@ -22,9 +22,9 @@
         
     <div class="entry-footer">
       <span class="the-author">By <?php the_author(); ?></span>
-      <span class="cats">Categories: <?php echo get_the_category_list( ', ' ); ?></span>
+      <span class="cats">Categories:</span> <?php echo get_the_category_list( ', ' ); ?>
     </div>
           
-    <?php edit_post_link(); ?>
+    <?php //edit_post_link(); ?>
           
   </article>
