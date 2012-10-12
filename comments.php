@@ -39,7 +39,8 @@
   
 <?php else : ?>
   
-    <p>Comments are closed here.</p>
+  <div class="panel callout">No Comments Yet!</div>
+    
   
 <?php endif; ?>
 
