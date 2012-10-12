@@ -106,6 +106,57 @@ function yeti_pagination() {
   );
 }
 add_action( 'init', 'yeti_pagination' );
- 
- 
+
+/**
+ * Custom comments
+ */ 
+function yeti_comments($comment, $args, $depth) {
+
+  $GLOBALS['comment'] = $comment; ?>
+  <li <?php comment_class(); ?>>
+    <article id="comment-<?php comment_ID(); ?>" class="panel">
+      <div class="comment-author vcard row">
+        <div class="twelve columns">
+          <!--<div class="
+              <?php
+              $authID = get_the_author_meta('ID');
+                                          
+              if($authID == $comment->user_id)
+                  echo "panel callout";
+              else
+                  echo "panel";
+              ?>
+          ">-->
+                       <!-- <div class="row">
+                    <div class="avatar two columns">-->
+                      <?php echo get_avatar($comment, 60 ); ?>
+                    <!--</div>
+                    <div class="ten columns">-->
+                      <div class="comment-meta">
+                        <span class="the-author"><?php echo get_comment_author_link() ?></span>
+                        <span class="the-date"><?php comment_time('F jS, Y'); ?></span>
+                      </div>
+                      
+                                
+                                <?php if ($comment->comment_approved == '0') : ?>
+                                      <div class="alert-box success">
+                                          <?php _e('Your comment is awaiting moderation.') ?>
+                                        </div>
+                                <?php endif; ?>
+                                
+                                <?php comment_text() ?>
+                                
+                                <!-- removing reply link on each comment since we're not nesting them -->
+                      <?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
+                           <!-- </div>
+                        </div>
+                    </div>-->
+                </div>
+      </div>
+    </article>
+    <!-- </li> is added by wordpress automatically -->
+<?php
+} // don't remove this bracket!
+?>
+
 ?>

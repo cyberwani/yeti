@@ -234,3 +234,46 @@ article p {
     color: #333;
 }
 
+
+/* -----------------------------------------
+   Comments
+----------------------------------------- */
+#comments ul {
+    list-style: none;
+}
+
+.avatar {
+    float: left;
+    position: absolute;
+
+}
+.comment-meta {
+    padding-left: 70px;
+    position: relative;
+    
+}
+.the-author {
+    float: left;
+    font-weight: bold; 
+    text-transform: uppercase;
+}
+.the-date {
+    color: #a9a9a9;
+    margin-left: 5px;
+    font-style: italic;
+}
+
+.says { display: none; }
+
+.comment article p {
+    padding: 5px 0 0 70px;
+}
+
+.comment-reply-link {
+    float: right;
+    padding: 10px 0;
+}
+
+
+
+
