@@ -107,6 +107,10 @@ function yeti_pagination() {
 }
 add_action( 'init', 'yeti_pagination' );
 
+// Close the main PHP statement
+?>
+
+<?php
 /**
  * Custom comments
  */ 
@@ -157,6 +161,4 @@ function yeti_comments($comment, $args, $depth) {
     <!-- </li> is added by wordpress automatically -->
 <?php
 } // don't remove this bracket!
-?>
-
 ?>
