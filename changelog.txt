@@ -1,0 +1,30 @@
+*** Yeti Changelog ***
+
+Nov 01 2012 - Version 1.1
+
+	* Updated theme with Foundation 3.2 code
+	* screenshot.png - added theme screenshot
+	* functions.php - fixed issue with broken brackets 
+	* style.css - updated version number
+
+Oct 12 2012 - Version 1.0.3
+
+	* style.css - updated version number
+		- fixed styling issue with comments
+
+Oct 11 2012 - Version 1.0.2
+
+	* comments.php - added comment template and layout
+	* functions.php - adjusting file to include custom comments
+	* style.css	- updated version number
+		- included styling for comments
+	
+Oct 10 2012 - Version 1.0.1
+
+	* readme.txt - added the readme file
+	* style.css - updated version number
+		- updated theme styling
+
+Oct 04 2012 - Version 1.0
+
+	First Release
