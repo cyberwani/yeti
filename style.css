@@ -4,7 +4,7 @@ Theme URI: https://github.com/modlearning/Yeti
 Author: ModLearning Team
 Author URI: http://modlearning.com
 Description: Free WordPress theme based on the Foundation framework
-Version: 1.0
+Version: 1.2
 Tags: zurb, foundation, modlearning, modular learning, clean, basic
 */
 
@@ -222,8 +222,11 @@ article p {
 .page-head { 
     margin: 30px 0 10px;
 }
-.p-sample ul, .p-sample h4{
+.p-sample h4 {
     padding-left: 10px;
+}
+.p-sample ul {
+    padding-left: 25px;
 }
 
 
