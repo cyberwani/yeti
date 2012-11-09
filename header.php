@@ -54,7 +54,7 @@
             <a href="<?php echo get_bloginfo('url'); ?>"><img src="<?php echo THEME_DIR; ?>/images/yeti-header.png" /></a>
         
             <ul class="right y-nav">
-              <?php wp_nav_menu(); ?>
+              <?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
             </ul>
           </section>
         </div>

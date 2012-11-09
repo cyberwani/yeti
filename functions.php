@@ -107,6 +107,17 @@ function yeti_pagination() {
 }
 add_action( 'init', 'yeti_pagination' );
 
+/**
+ * Add Menu support in the header
+ */
+function register_my_menus() {
+  register_nav_menus(
+    array( 'header-menu' => __( 'Header Menu' ) )
+  );
+}
+add_action( 'init', 'register_my_menus' );
+
+
 // Close the main PHP statement
 ?>
 
