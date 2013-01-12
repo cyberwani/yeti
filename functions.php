@@ -119,9 +119,7 @@ add_action( 'init', 'register_my_menus' );
 
 
 // Close the main PHP statement
-?>
-
-<?php
+?><?php
 /**
  * Custom comments
  */ 
@@ -148,21 +146,21 @@ function yeti_comments($comment, $args, $depth) {
                     <!--</div>
                     <div class="ten columns">-->
                       <div class="comment-meta">
-                        <span class="the-author"><?php echo get_comment_author_link() ?></span>
+                        <span class="the-author"><?php echo get_comment_author_link(); ?></span>
                         <span class="the-date"><?php comment_time('F jS, Y'); ?></span>
                       </div>
                       
                                 
                                 <?php if ($comment->comment_approved == '0') : ?>
                                       <div class="alert-box success">
-                                          <?php _e('Your comment is awaiting moderation.') ?>
+                                          <?php _e('Your comment is awaiting moderation.'); ?>
                                         </div>
                                 <?php endif; ?>
                                 
-                                <?php comment_text() ?>
+                                <?php comment_text(); ?>
                                 
                                 <!-- removing reply link on each comment since we're not nesting them -->
-                      <?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
+                      <?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth']))); ?>
                            <!-- </div>
                         </div>
                     </div>-->
